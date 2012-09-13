@@ -10,6 +10,10 @@ module ActiveAdmin
       end
 
       private
+        
+        def set_current_user
+            AdminUser.current = current_admin_user
+        end
 
       def set_current_tab
         @current_tab = I18n.t("active_admin.dashboard")
